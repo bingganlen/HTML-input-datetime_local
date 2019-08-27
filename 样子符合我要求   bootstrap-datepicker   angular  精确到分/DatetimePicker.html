@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DatePicker-Popup && DatetimePicker-Popup</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div ng-controller="indexController">
+    <form class="form-group">
+        开始时间 :
+        <div class="input-group col-md-2">
+            <input type="text"
+                   class="form-control"
+                   datetime-picker="yyyy-MM-dd HH:mm"
+                   ng-model="more.startDate"
+                   is-open="more.isStartOpen"
+                   button-bar="more.buttonBar"
+                   ng-required="true"/>
+                <span class="input-group-btn">
+                     <button type="button" class="btn btn-default" ng-click="openStartPicker()"><i
+                             class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+        </div>
+        结束时间 :
+        <div class="input-group col-md-2">
+            <input type="text"
+                   class="form-control"
+                   datetime-picker="yyyy-MM-dd HH:mm"
+                   ng-model="more.endDate"
+                   is-open="more.isEndOpen"
+                   button-bar="more.buttonBar"
+                   ng-required="true"
+                   datepicker-options="endOptions"/>
+
+            <span class="input-group-btn">
+                     <button type="button" class="btn btn-default" ng-click="openEndPicker()"><i
+                             class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+        </div>
+    </form>
+</div>
+<script src="./angular.min.js"></script>
+<script src="./ui-bootstrap-tpls.min.js"></script>
+<script src="./datetime-picker.min.js"></script>
+<script src="./datetime-picker.tpls.js"></script>
+<script src="./angular-locale_zh-cn.js"></script>
+<script>
+    angular.module('app', ['ui.bootstrap', 'ui.bootstrap.datetimepicker']).controller('indexController', function ($scope) {
+        $scope.more = {
+            isStartOpen: false,
+            isEndOpen: false,
+            startDate: new Date(),
+            endDate: new Date(),
+            buttonBar: {
+                show: true,
+                now: {
+                    show: true,
+                    text: '现在',
+                    cls: 'btn-sm btn-info'
+                },
+                today: {
+                    show: true,
+                    text: '今天',
+                    cls: 'btn-sm btn-info'
+                },
+                clear: {
+                    show: true,
+                    text: '清除',
+                    cls: 'btn-sm btn-danger'
+                },
+                date: {
+                    show: true,
+                    text: '日期',
+                    cls: 'btn-sm btn-default'
+                },
+                time: {
+                    show: true,
+                    text: '时间',
+                    cls: 'btn-sm btn-default'
+                },
+                close: {
+                    show: true,
+                    text: '确认',
+                    cls: 'btn-sm btn-success'
+                },
+                cancel: {
+                    show: false,
+                    text: '取消',
+                    cls: 'btn-sm btn-default'
+                }
+            }
+        }
+
+
+
+        $scope.setOptions = function () {
+            $scope.more.endDate = $scope.more.startDate;
+            $scope.endOptions = {
+                minDate: $scope.more.startDate
+            };
+        };
+        $scope.setOptions();
+
+        $scope.openStartPicker = function () {
+            $scope.more.isStartOpen = true;
+        };
+        $scope.openEndPicker = function () {
+            $scope.more.isEndOpen = true;
+        };
+
+        $scope.$watch('more.startDate', function (v) {
+            $scope.setOptions();
+        });
+    });
+</script>
+</body>
+</html>

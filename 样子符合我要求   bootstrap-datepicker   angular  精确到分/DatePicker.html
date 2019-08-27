@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DatePicker-Popup && DatetimePicker-Popup</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div ng-controller="indexController">
+    <form class="form-group">
+        开始时间 :
+        <div class="input-group col-md-2">
+                <input type="text"
+                       class="form-control"
+                       uib-datepicker-popup="{{more.format}}"
+                       ng-model="more.startDate"
+                       is-open="more.isStartOpen"
+                       ng-required="true"
+                       close-text="关闭"
+                       clear-text="清空"
+                       current-text="今天"
+                       alt-input-formats="more.altInputFormats"/>
+                <span class="input-group-btn">
+                     <button type="button" class="btn btn-default" ng-click="openStartPicker()"><i
+                             class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+        </div>
+        结束时间 :
+        <div class="input-group col-md-2">
+                <input type="text"
+                       class="form-control"
+                       uib-datepicker-popup="{{more.format}}"
+                       ng-model="more.endDate"
+                       is-open="more.isEndOpen"
+                       ng-required="true"
+                       close-text="关闭"
+                       clear-text="清空"
+                       current-text="今天"
+                       datepicker-options="endOptions"
+                       alt-input-formats="more.altInputFormats"/>
+
+            <span class="input-group-btn">
+                     <button type="button" class="btn btn-default" ng-click="openEndPicker()"><i
+                             class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+        </div>
+    </form>
+</div>
+<script src="./angular.min.js"></script>
+<script src="./ui-bootstrap-tpls.min.js"></script>
+<script src="./angular-locale_zh-cn.js"></script>
+<script>
+    angular.module('app', ['ui.bootstrap']).controller('indexController', function ($scope) {
+        $scope.more = {
+            isStartOpen: false,
+            isEndOpen: false,
+            startDate: new Date(),
+            endDate: new Date(),
+            format: 'yyyy-MM-dd',
+            altInputFormats: 'altInputFormats'
+        }
+
+        $scope.setOptions = function () {
+            $scope.more.endDate = $scope.more.startDate;
+            $scope.endOptions = {
+                minDate: $scope.more.startDate
+            };
+        };
+        $scope.setOptions();
+
+        $scope.openStartPicker = function () {
+            $scope.more.isStartOpen = true;
+        };
+        $scope.openEndPicker = function () {
+            $scope.more.isEndOpen = true;
+        };
+
+        $scope.$watch('more.startDate', function (v) {
+            $scope.setOptions();
+        });
+    });
+</script>
+</body>
+</html>

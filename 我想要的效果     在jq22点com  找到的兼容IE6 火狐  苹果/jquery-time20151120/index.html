@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="gb2312">
+<link type="text/css" href="jquery-ui-1.8.16.custom.css"
+	rel="stylesheet" />
+<script  language="javascript" type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script  language="javascript" type="text/javascript" src="jquery-ui-1.8.16.custom.min.js"></script>
+<script language="javascript" type="text/javascript" src="jquery-ui-timepicker-addon.js"></script>
+<script language="javascript" type="text/javascript" src="jquery.ui.datepicker-zh-CN.js"></script>	
+<script type="text/javascript">
+
+$(function(){
+	$("#time").datetimepicker({
+		changeYear : true,
+		changeMonth : true,
+		showSecond : true,
+		timeFormat : 'hh:mm:ss',
+		dateFormat : 'yy-mm-dd',
+		stepHour : 1,
+		stepMinute : 1,
+		stepSecond : 1
+	});
+	});
+	</script>
+	</head>
+	<body>
+	<form>
+	   <input type="text" id="time" />
+	</form>
+	</body>
+</html>
