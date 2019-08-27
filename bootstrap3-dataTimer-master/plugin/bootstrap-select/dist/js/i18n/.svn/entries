@@ -1,0 +1,84 @@
+10
+
+dir
+0
+https://192.168.20.217/svn/web/bollard-manager/trunk/test/plugin/bootstrap-select/dist/js/i18n
+https://192.168.20.217/svn/web
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c25c5305-06d8-fd49-83d5-372e44a9b895
+
+defaults-fa_IR.js
+file
+
+
+
+add
+
+defaults-de_DE.js
+file
+
+
+
+add
+
+defaults-cs_CZ.js
+file
+
+
+
+add
+
+defaults-fa_IR.min.js
+file
+
+
+
+add
+
+defaults-en_US.js
+file
+
+
+
+add
+
+defaults-zh_TW.js
+file
+
+
+
+add
+
+defaults-en_US.min.js
+file
+
+
+
+add
+
+defaults-ru_RU.js
+file
+
+
+
+add
+

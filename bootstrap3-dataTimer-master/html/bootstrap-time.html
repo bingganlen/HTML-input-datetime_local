@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>bootstrap-time</title>
+	
+	<link rel="stylesheet" href="../plugin/bootstrap-3.3.7/css/bootstrap.css" />
+	<link rel="stylesheet" href="../plugin/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.css" />
+	<script src="../plugin/jquery-1.9.1/jquery-1.9.1.min.js"></script>
+	<script src="../plugin/bootstrap-3.3.7/js/bootstrap.js"></script>
+	<script src="../plugin/bootstrap-datetimepicker-master/moment/min/moment-with-locales.min.js"></script>
+	<script src="../plugin/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js"></script>
+	
+</head>
+<body>
+   <!--<div class="row">  
+    <div class='col-sm-6'>  
+        <div class="form-group"> 
+            <div class='input-group date' id='datetimepicker1'>  
+                <input type='text' class="form-control" />  
+                <span class="input-group-addon">  
+                    <span class="glyphicon glyphicon-calendar"></span>  
+                </span>  
+            </div>  
+        </div>  
+    </div>  
+    <div class='col-sm-6'>  
+        <div class="form-group">  
+            <div class='input-group date' id='datetimepicker2'>  
+                <input type='text' class="form-control" />  
+                <span class="input-group-addon">  
+                    <span class="glyphicon glyphicon-calendar"></span>  
+                </span>  
+            </div>  
+        </div>  
+    </div>  
+</div>-->
+
+ <div class='input-group date' id='datetimepicker1'>  
+                <input type='text' class="form-control" />  
+                <span class="input-group-addon">  
+                    <span class="glyphicon glyphicon-calendar"></span>  
+                </span>  
+ </div>  
+     <div class='input-group date' id='datetimepicker2'>  
+                <input type='text' class="form-control" />  
+                <span class="input-group-addon">  
+                    <span class="glyphicon glyphicon-calendar"></span>  
+                </span>  
+            </div>  
+ 
+	  <script>
+		
+		 $('#datetimepicker1').datetimepicker({  
+        format: 'YYYY-MM-DD',  
+        locale: moment.locale('zh-cn') ,
+        stepping:2,
+      
+        //collapse:false, //禁止事件和日期的折叠
+        //sideBySide:true,  //在侧边显示时间
+    });  
+    $('#datetimepicker2').datetimepicker({  
+        format: 'YYYY-MM-DD HH:mm',  
+        locale: moment.locale('zh-cn'),
+        stepping:2,
+//      sideBySide:true,
+    });  
+	</script>
+</body>
+</html>

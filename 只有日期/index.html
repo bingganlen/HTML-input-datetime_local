@@ -1,0 +1,73 @@
+<html>
+<head>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.ltr.min.js"></script>
+    <link href="css/bootstrap.ltr.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    <script src="js/bootstrap-datepicker/bootstrap-datepicker.min.js" charset="UTF-8"></script>
+    <script src="js/bootstrap-datepicker/locale/ar.js" charset="UTF-8"></script>
+    <!--<script src="js/bootstrap-datepicker/locale/fa.js" charset="UTF-8"></script>-->
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            $.datepicker.setDefaults({
+                beforeShow:function(){
+                    setTimeout(function(){
+                        $('.ui-datepicker').css('z-index',9999);
+                    },0);
+                },
+                dateFormat:"yy-mm-dd",
+                changeMonth:false,
+                changeYear:false,
+                minDate:new Date()
+            });
+
+            $("#date_go").datepicker({
+                yearRange:'<?= $today_day_go_array[0]; ?>:1450',
+                onSelect:function(dateText,inst){
+                    $('#return_date').datepicker('option','minDate',dateText);
+                },
+                beforeShow:function(input,inst){
+                    datepicker_resize(input,inst,'DatePicker_FGroup_DateGo','date_go');
+                },
+                onChangeMonthYear:function(year,month,inst){
+                    datepicker_resize(get_input,get_inst,'DatePicker_FGroup_DateGo','date_go');
+                }
+            });
+            $("#return_date").datepicker({
+                yearRange:'1396:1450',
+                beforeShow:function(input,inst){
+                    datepicker_resize(input,inst,'DatePicker_FGroup_ReturnDate','return_date');
+                },
+                onChangeMonthYear:function(year,month,inst){
+                    datepicker_resize(get_input,get_inst,'DatePicker_FGroup_ReturnDate','return_date');
+                }
+            });
+        });
+
+        function datepicker_resize(input,inst,element_FGroup_id,element_id){
+            get_input=input;
+            get_inst=inst;
+            var offset=$(input).offset();
+            var DatePicker_FormGroup=$("#"+element_FGroup_id).width();
+            var InputSize=$("#"+element_id).outerWidth();
+            var InputIcon=parseInt(DatePicker_FormGroup)-parseInt(InputSize);
+            var NewLeft=offset.left;
+            window.setTimeout(function(){
+                $(inst.dpDiv).css({
+                    left:NewLeft+'px',
+                    width:(DatePicker_FormGroup-InputIcon)+"px"
+                })
+            },1);
+        }
+    </script>
+
+    <div id="DatePicker_FGroup_DateGo">
+        <input type="text" class="" name="date_go" id="date_go" value="" placeholder="">
+    </div>
+
+    <div id="DatePicker_FGroup_ReturnDate">
+        <input type="text" class="" name="return_date" id="return_date" value="" placeholder="">
+    </div>
+</head>
+</html>

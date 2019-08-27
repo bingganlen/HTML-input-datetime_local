@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200px"
+   height="200px"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="radio_true_disable.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.56"
+     inkscape:cx="100"
+     inkscape:cy="100"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1005"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10086" />
+  </sodipodi:namedview>
+  <defs
+     id="defs9527">
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient10124"
+       gradientUnits="userSpaceOnUse"
+       x="78.786797"
+       y="78.786797">
+      <meshrow
+         id="meshrow10126">
+        <meshpatch
+           id="meshpatch10128">
+          <stop
+             path="c 11.7157,-11.7157  30.7107,-11.7157  42.4264,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop10130" />
+          <stop
+             path="c 11.7157,11.7157  11.7157,30.7107  0,42.4264"
+             style="stop-color:#8a8a8a;stop-opacity:1"
+             id="stop10132" />
+          <stop
+             path="c -11.7157,11.7157  -30.7107,11.7157  -42.4264,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop10134" />
+          <stop
+             path="c -11.7157,-11.7157  -11.7157,-30.7107  0,-42.4264"
+             style="stop-color:#8a8a8a;stop-opacity:1"
+             id="stop10136" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient10138"
+       gradientUnits="userSpaceOnUse"
+       x="40"
+       y="40">
+      <meshrow
+         id="meshrow10140">
+        <meshpatch
+           id="meshpatch10142">
+          <stop
+             path="c 40,0  80,0  120,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop10144" />
+          <stop
+             path="c 0,40  0,80  0,120"
+             style="stop-color:#bfbfbf;stop-opacity:1"
+             id="stop10146" />
+          <stop
+             path="c -40,0  -80,0  -120,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop10148" />
+          <stop
+             path="c 0,-40  0,-80  0,-120"
+             style="stop-color:#bfbfbf;stop-opacity:1"
+             id="stop10150" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+  </defs>
+  <metadata
+     id="metadata9530">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#meshgradient10138);fill-opacity:1;stroke-width:1.66410065"
+       d="m 100,40 a 60,60 0 0 0 -60,60 60,60 0 0 0 60,60 60,60 0 0 0 60,-60 60,60 0 0 0 -60,-60 z m 0,10 a 50,50 0 0 1 50,50 50,50 0 0 1 -50,50 50,50 0 0 1 -50,-50 50,50 0 0 1 50,-50 z"
+       id="path1386" />
+    <circle
+       style="fill:url(#meshgradient10124);fill-opacity:1;stroke-width:0.92582011"
+       id="path7172"
+       cx="100"
+       cy="100"
+       r="30" />
+  </g>
+</svg>

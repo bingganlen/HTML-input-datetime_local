@@ -1,0 +1,56 @@
+10
+
+dir
+0
+https://192.168.20.217/svn/web/bollard-manager/trunk/test/plugin/bootstrap-datetimepicker/tests
+https://192.168.20.217/svn/web
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c25c5305-06d8-fd49-83d5-372e44a9b895
+
+assets
+dir
+
+
+
+add
+
+tests.min.html
+file
+
+
+
+add
+
+suites
+dir
+
+
+
+add
+
+_coverage.html
+file
+
+
+
+add
+
